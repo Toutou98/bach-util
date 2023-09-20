@@ -33,10 +33,10 @@ rw=randread
 wait_for=iops-read
 blocksize=1M
 iodepth=64
-rw=seqwrite
+rw=write
 
 [throughput-read]
 wait_for=iops-write
 blocksize=1M
 iodepth=64
-rw=seqread
+rw=read
