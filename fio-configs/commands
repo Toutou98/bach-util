@@ -1,0 +1,7 @@
+fio --loops=5 --size=1000m --filename=/dev/longhorn/vol-name --stonewall --ioengine=libaio \
+  --name=latency-write --bs=4k --iodepth=1 --rw=randread \
+  --name=latency-read --bs=4k --iodepth=1  --rw=randwrite \
+  --name=iops-write --bs=4k --iodepth=1 --threads=8 --rw=randwrite \
+  --name=iops-read --bs=4k --iodepth=1 --threads=8 --rw=randread \
+  --name=throughput-write --bs=1m --iodepth=64 --threads=8 --rw=write \
+  --name=throughput-read --bs=1m --iodepth=64 --threads=8 --rw=read

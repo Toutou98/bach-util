@@ -1,15 +1,16 @@
 [global]
-size=4g
 ioengine=libaio
 filename=/dev/longhorn/vol-name
 
 [latency-write]
+size=1g
 blocksize=4K
 iodepth=1
 rw=randwrite
 
 [latency-read]
 wait_for=latency-write
+size=1g
 blocksize=4K
 iodepth=1
 rw=randread
@@ -18,26 +19,26 @@ rw=randread
 wait_for=latency-read
 blocksize=4K
 iodepth=16
-threads=8
+numjobs=8
 rw=randwrite
 
 [iops-read]
 wait_for=iops-write
 blocksize=4K
 iodepth=16
-threads=8
+numjobs=8
 rw=randread
 
 [throughput-write]
 wait_for=iops-read
 blocksize=1M
 iodepth=64
-threads=8
+numjobs=8
 rw=write
 
 [throughput-read]
 wait_for=iops-write
 blocksize=1M
 iodepth=64
-threads=8
+numjobs=8
 rw=read

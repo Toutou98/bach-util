@@ -1,7 +1,6 @@
 [global]
-size=4g
 ioengine=libaio
-filename=/mnt/fmap/test
+filename=/mnt/nvme0n1p1
 
 [latency-write]
 blocksize=4K
@@ -18,26 +17,26 @@ rw=randread
 wait_for=latency-read
 blocksize=4K
 iodepth=16
-threads=8
+numjobs=8
 rw=randwrite
 
 [iops-read]
 wait_for=iops-write
 blocksize=4K
 iodepth=16
-threads=8
+numjobs=8
 rw=randread
 
 [throughput-write]
 wait_for=iops-read
 blocksize=1M
 iodepth=64
-threads=8
+numjobs=8
 rw=write
 
 [throughput-read]
 wait_for=iops-write
 blocksize=1M
 iodepth=64
-threads=8
+numjobs=8
 rw=read
