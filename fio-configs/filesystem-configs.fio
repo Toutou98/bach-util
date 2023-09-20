@@ -1,7 +1,7 @@
 [global]
 size=4g
 ioengine=libaio
-filename=/dev/nvme0n
+filename=/mnt/fmap/test
 
 [latency-write]
 blocksize=4K
