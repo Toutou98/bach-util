@@ -1,41 +1,56 @@
 [global]
+group_reporting
+disable_clat=1
+disable_slat=1
+time_based=1
+runtime=60
+direct=1
 ioengine=libaio
 filename=/mnt/nvme0n1p1
 
 [latency-write]
 blocksize=4K
-iodepth=1
+iodepth=4
 rw=randwrite
 
 [latency-read]
+stonewall
 wait_for=latency-write
 blocksize=4K
-iodepth=1
+iodepth=4
 rw=randread
 
 [iops-write]
+stonewall
 wait_for=latency-read
+gtod_reduce=1
 blocksize=4K
 iodepth=16
 numjobs=8
 rw=randwrite
 
 [iops-read]
+stonewall
 wait_for=iops-write
+gtod_reduce=1
 blocksize=4K
 iodepth=16
 numjobs=8
 rw=randread
 
 [throughput-write]
+stonewall
 wait_for=iops-read
+gtod_reduce=1
 blocksize=1M
 iodepth=64
 numjobs=8
 rw=write
 
 [throughput-read]
+stonewall
 wait_for=iops-write
+gtod_reduce=1
 blocksize=1M
 iodepth=64
 numjobs=8
