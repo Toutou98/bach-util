@@ -1,23 +1,21 @@
 [global]
 group_reporting
-disable_clat=1
-disable_slat=1
 time_based=1
-runtime=60
+runtime=120
 direct=1
 ioengine=libaio
 filename=/dev/nvme0n1
 
 [latency-write]
 blocksize=4K
-iodepth=4
+iodepth=1
 rw=randwrite
 
 [latency-read]
 stonewall
 wait_for=latency-write
 blocksize=4K
-iodepth=4
+iodepth=1
 rw=randread
 
 [iops-write]

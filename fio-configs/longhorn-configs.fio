@@ -10,14 +10,14 @@ filename=/dev/longhorn/vol-name
 
 [latency-write]
 blocksize=4K
-iodepth=4
+iodepth=1
 rw=randwrite
 
 [latency-read]
 stonewall
 wait_for=latency-write
 blocksize=4K
-iodepth=4
+iodepth=1
 rw=randread
 
 [iops-write]
