@@ -1,4 +1,8 @@
 [global]
+group_reporting
+time_based=1
+runtime=10
+gtod_reduce=1
 ioengine=libaio
 filename=/dev/longhorn/vol-name
 
@@ -9,6 +13,7 @@ iodepth=1
 rw=randwrite
 
 [latency-read]
+stonewall
 wait_for=latency-write
 size=1g
 blocksize=4K
@@ -16,6 +21,7 @@ iodepth=1
 rw=randread
 
 [iops-write]
+stonewall
 wait_for=latency-read
 blocksize=4K
 iodepth=16
@@ -23,6 +29,7 @@ numjobs=8
 rw=randwrite
 
 [iops-read]
+stonewall
 wait_for=iops-write
 blocksize=4K
 iodepth=16
@@ -30,6 +37,7 @@ numjobs=8
 rw=randread
 
 [throughput-write]
+stonewall
 wait_for=iops-read
 blocksize=1M
 iodepth=64
@@ -37,6 +45,7 @@ numjobs=8
 rw=write
 
 [throughput-read]
+stonewall
 wait_for=iops-write
 blocksize=1M
 iodepth=64
