@@ -2,6 +2,8 @@ groupid=
 read: I
 write: I
 lat (usec)
+ulat (
+slat (
 bw ( 
 iops        :
 Run status group 
