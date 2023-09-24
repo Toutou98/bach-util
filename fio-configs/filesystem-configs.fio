@@ -1,16 +1,15 @@
 [global]
 group_reporting
-disable_clat=1
-disable_slat=1
 time_based=1
-runtime=60
+runtime=120
 direct=1
 ioengine=libaio
-filename=/mnt/nvme0n1p1
+filename=/mnt/nvme0n1p1/fio-test
 
 [latency-write]
 blocksize=4K
 iodepth=1
+numjobs=1
 rw=randwrite
 
 [latency-read]
@@ -18,6 +17,7 @@ stonewall
 wait_for=latency-write
 blocksize=4K
 iodepth=1
+numjobs=1
 rw=randread
 
 [iops-write]
@@ -26,7 +26,7 @@ wait_for=latency-read
 gtod_reduce=1
 blocksize=4K
 iodepth=16
-numjobs=8
+numjobs=16
 rw=randwrite
 
 [iops-read]
@@ -35,7 +35,7 @@ wait_for=iops-write
 gtod_reduce=1
 blocksize=4K
 iodepth=16
-numjobs=8
+numjobs=16
 rw=randread
 
 [throughput-write]
@@ -43,8 +43,8 @@ stonewall
 wait_for=iops-read
 gtod_reduce=1
 blocksize=1M
-iodepth=64
-numjobs=8
+iodepth=128
+numjobs=1
 rw=write
 
 [throughput-read]
@@ -52,6 +52,6 @@ stonewall
 wait_for=iops-write
 gtod_reduce=1
 blocksize=1M
-iodepth=64
-numjobs=8
+iodepth=128
+numjobs=1
 rw=read

@@ -2,7 +2,7 @@ groupid=
 read: I
 write: I
 lat (usec)
-ulat (
+clat (
 slat (
 bw ( 
 iops        :

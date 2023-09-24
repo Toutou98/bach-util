@@ -1,10 +1,10 @@
 [global]
 group_reporting
 time_based=1
-runtime=120
+runtime=60
 direct=1
 ioengine=libaio
-filename=/dev/nvme0n1
+filename=/mnt/nvme0n1p1/fio-test
 
 [latency-write]
 blocksize=4K
