@@ -2,6 +2,7 @@
 group_reporting
 time_based=1
 runtime=120
+ramp_time=10
 direct=1
 ioengine=libaio
 filename=/mnt/nvme0n1p1/fio-test

@@ -1,5 +1,6 @@
 [global]
 group_reporting
+ramp_time=10
 time_based=1
 runtime=120
 direct=1
