@@ -50,7 +50,7 @@ rw=write
 
 [throughput-read]
 stonewall
-wait_for=iops-write
+wait_for=throughput-write
 gtod_reduce=1
 blocksize=1M
 iodepth=128
