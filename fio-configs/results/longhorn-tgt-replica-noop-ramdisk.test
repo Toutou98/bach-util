@@ -1,0 +1,46 @@
+latency-write: (groupid=0, jobs=1): err= 0: pid=191560: Wed Jan 17 21:29:24 2024
+  write: IOPS=12.3k, BW=48.2MiB/s (50.6MB/s)(5788MiB/120001msec); 0 zone resets
+    slat (usec): min=2, max=1079, avg= 8.56, stdev= 2.70
+    clat (nsec): min=731, max=2087.0k, avg=71660.12, stdev=17494.76
+     lat (usec): min=55, max=2108, avg=80.30, stdev=18.36
+   bw (  KiB/s): min=41328, max=53456, per=100.00%, avg=49401.96, stdev=2301.04, samples=240
+   iops        : min=10332, max=13364, avg=12350.44, stdev=575.26, samples=240
+  lat (usec)   : 2=0.01%, 20=0.01%, 50=0.01%, 100=96.51%, 250=3.37%
+  lat (usec)   : 500=0.11%, 750=0.01%, 1000=0.01%
+latency-read: (groupid=1, jobs=1): err= 0: pid=191654: Wed Jan 17 21:29:24 2024
+  read: IOPS=12.9k, BW=50.4MiB/s (52.8MB/s)(6047MiB/120001msec)
+    slat (usec): min=2, max=671, avg= 8.62, stdev= 2.32
+    clat (nsec): min=721, max=2045.0k, avg=68143.84, stdev=15906.01
+     lat (usec): min=54, max=2056, avg=76.84, stdev=16.64
+   bw (  KiB/s): min=44000, max=56328, per=100.00%, avg=51615.11, stdev=1924.39, samples=240
+   iops        : min=11000, max=14082, avg=12903.73, stdev=481.09, samples=240
+  lat (usec)   : 2=0.01%, 10=0.01%, 20=0.01%, 50=0.02%, 100=98.38%
+  lat (usec)   : 250=1.48%, 500=0.11%, 750=0.01%, 1000=0.01%
+iops-write: (groupid=2, jobs=16): err= 0: pid=191747: Wed Jan 17 21:29:24 2024
+  write: IOPS=48.4k, BW=189MiB/s (198MB/s)(22.1GiB/120014msec); 0 zone resets
+   bw (  KiB/s): min=162972, max=213602, per=100.00%, avg=193482.79, stdev=497.89, samples=3840
+   iops        : min=40743, max=53400, avg=48370.00, stdev=124.49, samples=3840
+iops-read: (groupid=3, jobs=16): err= 0: pid=191915: Wed Jan 17 21:29:24 2024
+  read: IOPS=49.8k, BW=194MiB/s (204MB/s)(22.8GiB/120018msec)
+   bw (  KiB/s): min=178456, max=213796, per=100.00%, avg=199116.15, stdev=354.70, samples=3840
+   iops        : min=44614, max=53446, avg=49778.56, stdev=88.67, samples=3840
+throughput-write: (groupid=4, jobs=1): err= 0: pid=191973: Wed Jan 17 21:29:24 2024
+  write: IOPS=725, BW=727MiB/s (762MB/s)(85.3GiB/120221msec); 0 zone resets
+   bw (  KiB/s): min=686080, max=794624, per=100.00%, avg=744293.32, stdev=18929.61, samples=240
+   iops        : min=  670, max=  776, avg=726.78, stdev=18.48, samples=240
+throughput-read: (groupid=5, jobs=1): err= 0: pid=191991: Wed Jan 17 21:29:24 2024
+  read: IOPS=1764, BW=1766MiB/s (1851MB/s)(207GiB/120072msec)
+   bw (  MiB/s): min= 1590, max= 1852, per=100.00%, avg=1766.16, stdev=41.04, samples=240
+   iops        : min= 1590, max= 1852, avg=1766.06, stdev=41.01, samples=240
+Run status group 0 (all jobs):
+  WRITE: bw=48.2MiB/s (50.6MB/s), 48.2MiB/s-48.2MiB/s (50.6MB/s-50.6MB/s), io=5788MiB (6069MB), run=120001-120001msec
+Run status group 1 (all jobs):
+   READ: bw=50.4MiB/s (52.8MB/s), 50.4MiB/s-50.4MiB/s (52.8MB/s-52.8MB/s), io=6047MiB (6341MB), run=120001-120001msec
+Run status group 2 (all jobs):
+  WRITE: bw=189MiB/s (198MB/s), 189MiB/s-189MiB/s (198MB/s-198MB/s), io=22.1GiB (23.8GB), run=120014-120014msec
+Run status group 3 (all jobs):
+   READ: bw=194MiB/s (204MB/s), 194MiB/s-194MiB/s (204MB/s-204MB/s), io=22.8GiB (24.5GB), run=120018-120018msec
+Run status group 4 (all jobs):
+  WRITE: bw=727MiB/s (762MB/s), 727MiB/s-727MiB/s (762MB/s-762MB/s), io=85.3GiB (91.6GB), run=120221-120221msec
+Run status group 5 (all jobs):
+   READ: bw=1766MiB/s (1851MB/s), 1766MiB/s-1766MiB/s (1851MB/s-1851MB/s), io=207GiB (222GB), run=120072-120072msec
