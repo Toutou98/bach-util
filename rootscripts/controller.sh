@@ -1,5 +1,5 @@
 #!/bin/bash
 
 cd longhorn-engine/bin
-./longhorn controller test --frontend socket --size 2g --current-size 2g --replica tcp://localhost:9502
+./longhorn controller test --frontend nbd --size 10g --current-size 10g --replica tcp://localhost:9502 --nbd-enabled 8 --frontend-streams 8
 
